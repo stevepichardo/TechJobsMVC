@@ -48,11 +48,12 @@ namespace TechJobs.Controllers
 
         public IActionResult Jobs(string column, string value)
         {
-            List<Dictionary<String, String>> jobs = JobData.FindByColumnAndValue(column, value);
+            List<Dictionary<string, string>> jobs = JobData.FindByColumnAndValue(column, value);
             ViewBag.title = "Jobs with " + columnChoices[column] + ": " + value;
             ViewBag.jobs = jobs;
 
             return View();
         }
+
     }
 }
